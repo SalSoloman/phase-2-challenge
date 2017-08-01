@@ -95,6 +95,6 @@ console.log(filterBetween(arrayOfStrings, 'chickadee', 'chimpanzee')) // =>
 // module.exports = {
 //   getMonth,
 //   reverseSentence,
-//   nameProps, 
+//   nameProps,
 //   filterBetween
 // }
