@@ -1,0 +1,86 @@
+body {
+  font-family: sans-serif;
+  margin: .5px;
+}
+
+header {
+  outline: black solid 2px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logoutButton {
+  padding: 10px 60px;
+}
+
+nav {
+  outline: black solid 2px;
+  font-size: 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: inherit;
+  padding-left: 10px;
+  padding-right: 50px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  outline: black solid 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBar {
+  outline: black solid 2px;
+  margin-top: auto;
+  padding: 10px;
+  background-color: #A9A9A9;
+}
+
+.movies {
+  padding: 15px;
+}
+
+h1 {
+  margin: auto;
+  font-size: 50px;
+}
+
+.drama, .romance, .action, .sci-fi {
+  font-style: italic;
+}
+
+.movieSection {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.cell {
+  display: table-cell;
+  height: 3rem;
+  vertical-align: middle;
+}
+
+.description {
+  width: 80%;
+}
+
+.play, .length {
+  width: 10%;
+  text-align: center;
+}
+
+
+button {
+  padding: 10px 24px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .2)
+}

@@ -1,7 +1,6 @@
 
 function getMonth(date) {
   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  let todayDate = new Date
   let currentMonth = date.getMonth()
   let nameOfMonth = months[currentMonth - 1]
   return nameOfMonth
@@ -13,6 +12,9 @@ console.log(getMonth(date)) // returns "May"
 
 let christmas = new Date(2017, 11, 25) // November 25, 2017
 console.log(getMonth(christmas)) // returns "November"
+
+let birthday = new Date(2017, 1, 10) // January 10, 2017
+console.log(getMonth(birthday)) // returns "January"
 
 
 
