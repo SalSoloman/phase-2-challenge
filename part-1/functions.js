@@ -1,5 +1,5 @@
 
-function getMonth(date) {
+const month = function month(date) {
   let months = ["January",
   "February",
   "March",
@@ -18,21 +18,21 @@ function getMonth(date) {
 }
 
 
-let date = new Date(2017, 5, 19) // June 19, 2017
-console.log(getMonth(date)) // returns "June"
-
-let christmas = new Date(2017, 11, 25) // December 25, 2017
-console.log(getMonth(christmas)) // returns "December"
-
-let birthday = new Date(2017, 0, 10) // January 10, 2017
-console.log(getMonth(birthday)) // returns "January"
-
-
+// let date = new Date(2017, 5, 19) // June 19, 2017
+// console.log(month(date)) // returns "June"
+// //
+// let christmas = new Date(2017, 11, 25) // December 25, 2017
+// console.log(month(christmas)) // returns "December"
+//
+// let birthday = new Date(2017, 0, 10) // January 10, 2017
+// console.log(month(birthday)) // returns "January"
 
 
 
 
-function reverseSentence(stringOfWords) {
+
+
+const reverseSentence = function reverseSentence(stringOfWords) {
   // check if the given string has more than one word using split array method
   // if ture split the string, reverse it then join back
   // if false return the one word string with no modification
@@ -44,9 +44,9 @@ function reverseSentence(stringOfWords) {
   return stringOfWords
 }
 
-console.log(reverseSentence("The cat jumped over the dog.")) // => "dog. the over jumped cat The"
-console.log(reverseSentence("Hello, world!")) // => "world! Hello,"
-console.log(reverseSentence('Counter')) // => "Counter"
+// console.log(reverseSentence("The cat jumped over the dog.")) // => "dog. the over jumped cat The"
+// console.log(reverseSentence("Hello, world!")) // => "world! Hello,"
+// console.log(reverseSentence('Counter')) // => "Counter"
 
 
 
@@ -54,7 +54,7 @@ console.log(reverseSentence('Counter')) // => "Counter"
 
 
 
-function nameProps(object) {
+const nameProps = function nameProps(object) {
   // get the object property name using Object.getOwnPropertyNames
   // sort the resutls
 
@@ -68,8 +68,8 @@ let friend = {
   phone: '555-555-5555'
 }
 
-console.log(nameProps(friend)) // => ['age', 'name', 'phone']
-console.log(nameProps({})) // => []
+// console.log(nameProps(friend)) // => ['age', 'name', 'phone']
+// console.log(nameProps({})) // => []
 
 
 
@@ -95,29 +95,37 @@ console.log(nameProps({})) // => []
 //   return finalArray
 // }
 
-function filterBetween(arr, min, max) {
+const filterBetween =function filterBetween(arr, min, max) {
   let newArray = []
-  arr.filter(function(string) {
-    if (string >= min && string <= max) {
-      newArray.push(string)
+  arr.filter(function(animal) {
+    if (animal >= min && animal <= max) {
+      newArray.push(animal)
     }
   })
   return newArray;
 };
 
 
-let arrayOfStrings = ['dog', 'cat', 'zebra', 'ape', 'lion', 'cow']
+// let arrayOfStrings = ['dog', 'cat', 'zebra', 'ape', 'lion', 'cow']
+//
+// console.log(filterBetween(arrayOfStrings, 'deer', 'giraffe')) // => ['dog']
+// console.log(filterBetween(arrayOfStrings, 'chimp', 'lobster')) // => ['dog', 'lion', 'cow']
+// console.log(filterBetween(arrayOfStrings, 'chickadee', 'chimpanzee')) // =>
 
-console.log(filterBetween(arrayOfStrings, 'deer', 'giraffe')) // => ['dog']
-console.log(filterBetween(arrayOfStrings, 'chimp', 'lobster')) // => ['dog', 'lion', 'cow']
-console.log(filterBetween(arrayOfStrings, 'chickadee', 'chimpanzee')) // =>
 
 
+module.exports
 
-// 
+// when exporting a selection of functions and not the whole module
+// assign the function to a varialbe
+// then export each varialbe in the an object form
 // module.exports = {
-//   getMonth,
+//   month,
 //   reverseSentence,
 //   nameProps,
 //   filterBetween
 // }
+// in the test file when requiring the specific function from the module
+// specify the function by adding the varuable to the path in the following form
+// const month = require('../part-1/functions').month
+// otherwise require the whole module/file

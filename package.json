@@ -1,0 +1,23 @@
+{
+  "name": "phase-2-challenge",
+  "version": "1.0.0",
+  "description": "This project of multiple challenges is to test knowledge and advance from phase 1 to phase 2",
+  "main": "functions.js",
+  "scripts": {
+    "test": "find ./part-1 -name '*tests.js' | xargs mocha -R spec Mocha || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalSoloman/phase-2-challenge.git"
+  },
+  "author": "Sal Soloman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SalSoloman/phase-2-challenge/issues"
+  },
+  "homepage": "https://github.com/SalSoloman/phase-2-challenge#readme",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0"
+  }
+}
