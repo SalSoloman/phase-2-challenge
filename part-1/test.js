@@ -62,3 +62,7 @@ describe('Tests for part-1', () => {
     })
   })
 })
+
+
+// mocha command looks by default in a file called test.js
+// specify the name of the file when running mocha if the file name is NOT test.js
