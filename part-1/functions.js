@@ -1,5 +1,5 @@
 
-const month = function month(date) {
+function month(date) {
   let months = ["January",
   "February",
   "March",
@@ -31,8 +31,7 @@ const month = function month(date) {
 
 
 
-
-const reverseSentence = function reverseSentence(stringOfWords) {
+function reverseSentence(stringOfWords) {
   // check if the given string has more than one word using split array method
   // if ture split the string, reverse it then join back
   // if false return the one word string with no modification
@@ -52,9 +51,7 @@ const reverseSentence = function reverseSentence(stringOfWords) {
 
 
 
-
-
-const nameProps = function nameProps(object) {
+function nameProps(object) {
   // get the object property name using Object.getOwnPropertyNames
   // sort the resutls
 
@@ -95,7 +92,7 @@ let friend = {
 //   return finalArray
 // }
 
-const filterBetween =function filterBetween(arr, min, max) {
+function filterBetween(arr, min, max) {
   let newArray = []
   arr.filter(function(animal) {
     if (animal >= min && animal <= max) {
@@ -114,17 +111,17 @@ const filterBetween =function filterBetween(arr, min, max) {
 
 
 
-module.exports
+// module.exports
 
 // when exporting a selection of functions and not the whole module
 // assign the function to a varialbe
 // then export each varialbe in the an object form
-// module.exports = {
-//   month,
-//   reverseSentence,
-//   nameProps,
-//   filterBetween
-// }
+module.exports = {
+  month,
+  reverseSentence,
+  nameProps,
+  filterBetween
+}
 // in the test file when requiring the specific function from the module
 // specify the function by adding the varuable to the path in the following form
 // const month = require('../part-1/functions').month

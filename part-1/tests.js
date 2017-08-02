@@ -1,5 +1,5 @@
 const assert = require('chai').assert
-const functions = require('../part-1/functions')
+const {month, reverseSentence, nameProps, filterBetween} = require('../part-1/functions')
 
 
 describe('Tests for part-1', () => {
@@ -26,7 +26,7 @@ describe('Tests for part-1', () => {
       assert.equal(reverseSentence('The cat jumped over the dog.'), 'dog. the over jumped cat The')
     )
     it('it returns one word arguments unchanged', () =>
-      assert.equal(reverseSentence('Counter'), 'Howdy')
+      assert.equal(reverseSentence('Counter'), 'Counter')
     )
     it('it does not reverse non-space words', () =>
       assert.notEqual(reverseSentence('HelloThere'), 'ThereHello')
@@ -56,9 +56,9 @@ describe('Tests for part-1', () => {
       let arr = ['dog', 'cat', 'zebra', 'ape', 'lion', 'cow']
       assert.deepEqual(filterBetween(arr, 'chimp', 'lobster'), ['dog', 'lion', 'cow'])
     })
-    it('it returns a new array containing only the elements that come after min and before max', () => {
-      let arr = ['dog', 'cat', 'zebra', 'ape', 'lion', 'cow']
-      assert.deepEqual(filterBetween(arr, 'chimp', 'lobster'), ['zebra', 'ape', 'lion'])
+    it('filterBetween returns a new array containing only the elements that come after min and before max', () => {
+      let buildingItems = ['carvan', 'garage', 'park', 'floor']
+      assert.notDeepEqual(filterBetween(buildingItems, 'door', 'gate'), ['garage', 'park', 'floor'])
     })
   })
 })
